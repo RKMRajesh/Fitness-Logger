@@ -1,0 +1,230 @@
+body {
+    /* no need to reset margin to 0 since we included the reset.css file */
+    /* margin: 0; */ 
+    background-color: rgb(241, 240, 240);
+    font-family: "Open Sans";
+    min-width: 350px;
+}
+
+/* Make all button tag elements round and give the below padding */
+button {
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+/* change the way the crsor looks when it hovers over a button */
+button:hover {
+    cursor: pointer;
+}
+
+label, form-label {
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+#scalar-wrapper {
+    padding: 10px;;
+}
+
+input {
+    height: 20px;
+    padding: 10px;
+    font-weight: normal;
+    background-color: whitesmoke;
+}
+
+select {
+    height: 40px;
+    font-weight: normal;
+    padding: 0px 10px;
+    background-color: whitesmoke;
+}
+
+nav {
+    background-color: #333333;
+    color: #fff;
+    /* top and bottom paddings: 20px, right and left paddings: 40px */
+    padding: 20px 40px;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+header {    
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1220px;
+    padding: 0px 40px;    
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: bolder;
+}
+
+header p {
+    font-size: 1.2rem;
+   /* font-weight: bold; */
+}
+
+#welcome {  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* position: relative; */
+    width: 100%;
+    min-height: 300px;
+    padding-top: 50px;
+}
+
+#header-img {
+    max-width: 70%;
+    align-self:flex-end;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0px 40px 40px;
+    max-width: 1220px;
+
+}
+
+main h3 {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.activity-section {
+    margin-top: 20px;
+}
+
+#past-activity-header {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.overlayClass {
+    position: fixed; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    cursor: pointer; 
+}
+
+#overlay2 {
+    position: fixed;
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;    
+    width: 80%;
+    background-color: rgb(241, 240, 240);
+    padding: 70px 10px;
+}
+
+#overlay2-labels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+#pastContainer {
+    margin-top: 10px;
+    background-color: #53e0cd;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    border-radius: 40px;
+}
+
+.reminder-section-class {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(0, 119, 255, 0.63);
+    /* min-height: 75px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#reminder-section h1 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#reminder-section-reminder h1 {
+    color: white;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.hide {
+    display: none;
+}
+
+.pseudoform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.addBtn {
+    color: black;
+    background-color: #fff;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    align-self: center;
+}
+
+.form-button {
+    align-self: center;
+    color: white;
+    background-color: #333333;
+    margin: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+
+#futureContainer {
+    margin-top: 10px;
+    background-color: #b1bab9;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    border-radius: 40px;
+}
+
+
+/* @media (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+} */

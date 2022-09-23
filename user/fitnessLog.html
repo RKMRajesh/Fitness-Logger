@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Log</title>
+    <link rel="stylesheet" href="/css/barchart.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="fitnessLog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script defer src="fitnessLog.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./js/main.js" type='module'></script>
+</head>
+<body>
+    <nav> <h3>Fitness Log</h3> </nav>
+
+    <header>
+        <div id="welcome">
+            <h1>Welcome back, <br> <span id="username"> Joey!</span></h1>
+            <img id="header-img" src="header_image.png" alt="image of people exercising">
+            <p> What activity session are you logging?</p>    
+        </div>
+       
+    </header>
+
+    <main>
+
+        <div id="reminder-section" class="reminder-section-class hide">
+            <div id="reminder-section-label"> <h1>Reminder</h1></div>
+            <div id="reminder-section-reminder"></div>
+            <div id="yes-or-no">
+                <button id="reminder-yes-btn" class="addBtn"> Yes </button>
+                <button id="reminder-no-btn" class="addBtn"> No </button>
+            </div>
+        </div>
+
+
+        <!-- Past Activity -->
+
+        <div class="activity-section" id="pastActivity">
+            <div id="past-activity-header">
+                <h3>Past Activity</h3>
+                <button id="view-progress-btn" class="form-button">View Progress</button>                
+            </div>
+            <div id=overlay class="overlayClass hide">
+                <div id="overlay2">
+                    <div id="overlay2-labels">
+                        <!-- <label id="closeBtn"> Close </label> -->
+
+                        <div id="overlay-activities-wrapper">
+                            <label>
+                                Activity: 
+                                <select name="past-activities" id="overlay-activities">
+                                    <option value="Walk">Walk</option>
+                                    <option value="Run">Run</option>
+                                    <option value="Swim">Swim</option>
+                                    <option value="Bike">Bike</option>
+                                    <option value="Yoga">Yoga</option>
+                                    <option value="Soccer">Soccer</option>
+                                    <option value="Basketball">Basketball</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <label>
+                            Week Ending 
+                            <input type="date" id="overlay-date">
+                        </label>
+
+                        <button id="overlay-submit-btn" class="form-button"> Go </button>
+                        <button id="overlay-close-btn" class="form-button"> Close </button>
+                    </div>
+                    
+                    <!-- <label></label> -->
+                    <div id="chart-anchor"> </div> 
+                </div>                           
+            </div>
+            
+            <div id="pastContainer">
+
+                <!-- Add button -->
+                <div id="pastAdd" class="form-container">
+                    <button id="addPastActivityBtn" class="addBtn">Add New Activity</button>
+                </div>
+
+                <!-- The Form -->
+                <div id="pastForm" class="form-container hide">
+                    <div class="pseudoform">
+                        <label>
+                            Date
+                            <input type="date" id="pActDate">
+                        </label>
+
+                        <div id="activities-wrapper">
+                            <label>
+                                Activity
+                                <select name="past-activities" id="pActActivity">
+                                    <option value="Walk">Walk</option>
+                                    <option value="Run">Run</option>
+                                    <option value="Swim">Swim</option>
+                                    <option value="Bike">Bike</option>
+                                    <option value="Yoga">Yoga</option>
+                                    <option value="Soccer">Soccer</option>
+                                    <option value="Basketball">Basketball</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div id="scalar-wrapper">
+                            <label id="label-scalar">
+                                Time/Distance
+                                <input type="number" id="pActScalar">
+                            </label>
+                            <label id="label-units">
+                                Units
+                                <input type="text" id="pActUnit" value="km" readonly>
+                            </label>
+                        </div>
+
+                        <button id="submitPastActivityBtn" class="form-button">Submit</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Future Activity -->
+        <div class="activity-section" id="futureActivity">
+            <h3>Future Plans</h3>
+            <div id="futureContainer">
+                <h3 id="fEcho"> </h3>
+                <div id="futureAdd" class="form-container">
+                    <button id="addFutureActivityBtn" class="addBtn">Add New Activity</button>
+                </div>
+
+                <div id="futureForm" class="form-container hide">
+                    <div class="pseudoform">
+                        <label>
+                            Date
+                            <input type="date" id="fActDate">
+                        </label>
+
+                        <label>
+                            Activity
+                            <select name="past-activities" id="fActActivity">
+                                <option value="Walk">Walk</option>
+                                <option value="Run">Run</option>
+                                <option value="Swim">Swim</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Soccer">Soccer</option>
+                                <option value="Basketball">Basketball</option>
+                            </select>
+                        </label>
+
+                        <button id="submitFutureActivityBtn" class="form-button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
